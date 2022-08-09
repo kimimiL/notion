@@ -44,7 +44,7 @@ body{
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+", " + (today.getMonth()+1) + "/" + today.getDate()+'/'+today.getFullYear()  ;
-    var time = today.getHours() + ":" + today.getMinutes()
+    var time = (today.getHours() % 12 || 12) + ":" + today.getMinutes()
     var suffix = 'PM';
     var greet;
 
