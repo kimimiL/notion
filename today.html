@@ -48,13 +48,16 @@ body{
     var suffix = 'PM';
     var greet;
 
-    if (hrs < 12)
+    if (hrs < 12) {
         greet = 'Good Morning,  ';
         suffix = 'AM';
-    else if (hrs >= 12 && hrs <= 17)
+    }
+    else if (hrs >= 12 && hrs <= 17) {
         greet = 'Good Afternoon, ';
-    else if (hrs >= 17 && hrs <= 23)
+    }
+    else if (hrs >= 17 && hrs <= 23) {
         greet = 'Good Evening,  ';
+    }
 
     document.getElementById('lbl').innerHTML =
         greet+="Kim! " +`<div id="date"> It's ${date}</div><br /><div>${time} `+suffix`</div>`;
